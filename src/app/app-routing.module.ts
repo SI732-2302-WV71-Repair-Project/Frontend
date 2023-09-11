@@ -3,12 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { MyAppliancesComponent } from './components/my-appliances/my-appliances.component';
 import { MyPlanComponent } from './components/my-plan/my-plan.component';
-import { MyRouteComponent } from './components/my-route/my-route.component';
 import { NotificationsComponent } from './components/notifications/notifications.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ReportsComponent } from './components/reports/reports.component';
 import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { MyTechniciansComponent } from './components/my-technicians/my-technicians.component';
+import { SettingsComponent } from './components/settings/settings.component';
 
 const routes: Routes = [
 
@@ -19,10 +20,11 @@ const routes: Routes = [
   { path: 'app-navbar', component: NavbarComponent },
   { path: 'app-my-appliances', component: MyAppliancesComponent },
   { path: 'app-my-plan', component: MyPlanComponent },
-  { path: 'app-my-route', component: MyRouteComponent },
   { path: 'app-notifications', component: NotificationsComponent },
   { path: 'app-profile', component: ProfileComponent },
   { path: 'app-reports', component: ReportsComponent },
+  {path:'app-my-technicians', component:MyTechniciansComponent},
+  { path: 'app-settings', component:SettingsComponent},
   
   {path: 'app-footer', component:FooterComponent}
 ];

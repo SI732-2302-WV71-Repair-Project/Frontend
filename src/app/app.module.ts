@@ -8,10 +8,11 @@ import { MyAppliancesComponent } from './components/my-appliances/my-appliances.
 import { MyPlanComponent } from './components/my-plan/my-plan.component';
 import { NotificationsComponent } from './components/notifications/notifications.component';
 import { ReportsComponent } from './components/reports/reports.component';
-import { MyRouteComponent } from './components/my-route/my-route.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { MyTechniciansComponent } from './components/my-technicians/my-technicians.component';
+import { SettingsComponent } from './components/settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -21,10 +22,11 @@ import { FooterComponent } from './components/footer/footer.component';
     MyPlanComponent,
     NotificationsComponent,
     ReportsComponent,
-    MyRouteComponent,
     ProfileComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    MyTechniciansComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,
