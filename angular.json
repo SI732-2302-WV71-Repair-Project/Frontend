@@ -63,7 +63,8 @@
               "browserTarget": "repair-project:build:production"
             },
             "development": {
-              "browserTarget": "repair-project:build:development"
+              "browserTarget": "repair-project:build:development",
+              "proxyConfig": "proxy.conf.json" 
             }
           },
           "defaultConfiguration": "development"
