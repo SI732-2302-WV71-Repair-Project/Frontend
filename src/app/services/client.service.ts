@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ClientService {
-  private apiUrl = '/api'; // Actualiza esta línea
+  private apiUrl = '/api/client';
 
   constructor(private http: HttpClient) { }
 

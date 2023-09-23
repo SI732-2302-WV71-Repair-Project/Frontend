@@ -1,7 +1,10 @@
 {
-    "/api": {
-      "target": "https://repair-api.fly.dev",
-      "secure": false,
-      "changeOrigin": true
+  "/api": {
+    "target": "https://repair-api.fly.dev",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api": ""
     }
   }
+}
