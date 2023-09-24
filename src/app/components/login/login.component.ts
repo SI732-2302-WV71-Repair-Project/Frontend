@@ -24,6 +24,7 @@ export class LoginComponent implements OnInit{
   login(): void {
     this.clientService.login(this.email, this.password).subscribe(
       (data) => {
+        console.log(data);
         if(data && data.id){
           this.router.navigate(['/app-home', data.id])
         }

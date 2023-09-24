@@ -27,9 +27,9 @@ export class ClientService {
     return this.http.put(url, updatedClientData);
   }
 
-  login (email: string, password: string): Observable<any> {
-  
-    return this.http.post(this.apiUrl, { email, password });
+  login(email: string, password: string): Observable<Client> {
+    // Hacer una solicitud GET con parámetros de consulta para buscar al cliente por email y contraseña
+    return this.http.get<Client>(`${this.apiUrl}?email=${email}&password=${password}`);
   }
 
   //register
