@@ -4,7 +4,7 @@
         <div class="row g-3">
             <div class="col-sm-6">
                 <label for="firstName" class="form-label">Nombres</label>
-                <input type="text" class="form-control" id="firstName" placeholder="Juan" value="" required="">
+                <input type="text" class="form-control" id="firstName" placeholder="{{client.user.firstName}}" value="" required="">
                 <div class="invalid-feedback">
                     El nombre es requerido.
                 </div>
@@ -12,14 +12,15 @@
 
             <div class="col-sm-6">
                 <label for="lastName" class="form-label">Apellidos</label>
-                <input type="text" class="form-control" id="lastName" placeholder="Perez Lopez" value="" required="">
+                <input type="text" class="form-control" id="lastName" placeholder="{{client.user.lastName}}" value="" required="">
                 <div class="invalid-feedback">
                     El apellido es requerido.
                 </div>
             </div>
+            
             <div class="col-12">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="your@example.com">
+                <input type="email" class="form-control" id="email" placeholder="{{client.user.email}}">
                 <div class="invalid-feedback">
                     Por favor ingrese un email valido.
                 </div>
@@ -27,7 +28,7 @@
 
             <div class="col-12">
                 <label for="password" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="password" placeholder="juanPerez" required="">
+                <input type="password" class="form-control" id="password" placeholder="{{client.user.password}}" required="">
                 <div class="invalid-feedback">
                     Please enter your shipping address.
                 </div>
