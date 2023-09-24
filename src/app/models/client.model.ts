@@ -7,9 +7,9 @@ export interface Client {
       cellphoneNumber: string;
       email: string;
       password: string;
-      birthDate: string;
+      birthDate: Date|null;
       gender: string;
-      lastConnection: string;
+      lastConnection: Date|null;
       address: string;
     };
   }
