@@ -14,6 +14,8 @@ import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MyTechniciansComponent } from './components/my-technicians/my-technicians.component';
 import { SettingsComponent } from './components/settings/settings.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { SettingsComponent } from './components/settings/settings.component';
     HomeComponent,
     FooterComponent,
     MyTechniciansComponent,
-    SettingsComponent
+    SettingsComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

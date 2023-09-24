@@ -10,13 +10,17 @@ import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MyTechniciansComponent } from './components/my-technicians/my-technicians.component';
 import { SettingsComponent } from './components/settings/settings.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 const routes: Routes = [
 
 
+  {path: 'app-login', component:LoginComponent},
+  {path: 'app-register', component:RegisterComponent},
+  
+  { path: '', redirectTo: '/app-login', pathMatch: 'full' },
   {path: 'app-home', component:HomeComponent },
-  { path: '', redirectTo: '/app-home', pathMatch: 'full' },
-
   { path: 'app-navbar', component: NavbarComponent },
   { path: 'app-my-appliances', component: MyAppliancesComponent },
   { path: 'app-my-plan', component: MyPlanComponent },

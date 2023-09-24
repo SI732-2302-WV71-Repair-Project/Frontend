@@ -17,7 +17,7 @@ export class ProfileComponent implements OnInit {
     // Supongamos que el ID del cliente que deseas obtener es 2
     const clientId = 3;
     console.log(clientId);
-     this.clientSubscription = this.clientService.getClientById(clientId).subscribe(
+      this.clientSubscription = this.clientService.getClientById(clientId).subscribe(
       (data) => {
         this.client = data;
         console.log(this.client);

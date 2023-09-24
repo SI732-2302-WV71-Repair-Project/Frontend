@@ -18,4 +18,9 @@ export class ClientService {
     const url = `${this.apiUrl}/${clientId}`;
     return this.http.get(url);
   }
+
+  login(email: string, password: string): Observable<any> {
+    const url = `${this.apiUrl}/login`;
+    return this.http.post(url, { email, password });
+  }
 }
