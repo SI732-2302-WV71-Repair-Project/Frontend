@@ -15,7 +15,7 @@ export class HomeComponent {
   constructor(private clientService: ClientService) {}
 
   ngOnInit(): void {
-    const clientId = 3
+    const clientId = 1
     console.log(clientId)
       this.clientSubscription = this.clientService.getClientById(clientId).subscribe(
       (data) => {

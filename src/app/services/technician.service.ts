@@ -1,30 +1,29 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Client } from '../models/client.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ClientService {
+export class TechnicianService {
   private apiUrl = '/api/users';
 
   constructor(private http: HttpClient) { }
 
-  getClients(): Observable<any> {
+  getTechnician(): Observable<any> {
     return this.http.get(this.apiUrl);
   }
 
-  getClientById(clientId: number): Observable<any> {
-    const url = `${this.apiUrl}/${clientId}`;
+  getTechnicianById(technicianId: number): Observable<any> {
+    const url = `${this.apiUrl}/${technicianId}`;
     return this.http.get(url);
   }
 
-  updateClient(clientId: number, updatedClientData: any): Observable<any> {
-    const url = `${this.apiUrl}/${clientId}`;
+  updateTechnician(technicianId: number, updatedTechnicianData: any): Observable<any> {
+    const url = `${this.apiUrl}/${technicianId}`;
     console.log(url);
-    console.log(updatedClientData);
-    return this.http.put(url, updatedClientData);
+    console.log(updatedTechnicianData);
+    return this.http.put(url, updatedTechnicianData);
   }
 
   login(email: string, password: string): Observable<any> {

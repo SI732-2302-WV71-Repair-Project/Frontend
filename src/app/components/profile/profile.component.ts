@@ -15,7 +15,7 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit(): void {
     // Supongamos que el ID del cliente que deseas obtener es 2
-    const clientId = 3;
+    const clientId = 1;
     console.log(clientId);
       this.clientSubscription = this.clientService.getClientById(clientId).subscribe(
       (data) => {

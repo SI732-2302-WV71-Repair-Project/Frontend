@@ -1,6 +1,4 @@
 export interface Client {
-    id: number;
-    user: {
       id: number;
       firstName: string;
       lastName: string;
@@ -11,6 +9,5 @@ export interface Client {
       gender: string;
       lastConnection: Date|null;
       address: string;
-    };
-  }
+}
   

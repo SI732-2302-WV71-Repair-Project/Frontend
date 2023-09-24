@@ -9,8 +9,6 @@ import { ClientService } from 'src/app/services/client.service';
 })
 export class SettingsComponent implements OnInit {
   client: Client = {
-    id: 0,
-    user: {
       id: 0,
       firstName: '',
       lastName: '',
@@ -21,7 +19,7 @@ export class SettingsComponent implements OnInit {
       gender: '',
       lastConnection: null,
       address: ''
-  }};
+  };
 
   constructor(private clientService: ClientService) { }
 
@@ -31,7 +29,7 @@ export class SettingsComponent implements OnInit {
   }
 
   obtenerClienteActual() {
-    const clientId = 3; // Reemplaza con el ID del cliente que deseas obtener
+    const clientId = 1; // Reemplaza con el ID del cliente que deseas obtener
     this.clientService.getClientById(clientId).subscribe(
       (data) => {
         this.client = { ...data }; // Copia los datos del cliente obtenido
