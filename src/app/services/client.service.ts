@@ -27,8 +27,15 @@ export class ClientService {
     return this.http.put(url, updatedClientData);
   }
 
-  login(email: string, password: string): Observable<any> {
-    const loginUrl = `${this.apiUrl}/login`;  // Suponiendo que este es el endpoint para iniciar sesión
-    return this.http.post(loginUrl, { email, password });
+  login (email: string, password: string): Observable<any> {
+  
+    return this.http.post(this.apiUrl, { email, password });
   }
+
+  //register
+  /*
+  login (email: string, password: string): Observable<any> {
+    return this.http.post(this.apiUrl, { email, password });
+  }
+  */
 }

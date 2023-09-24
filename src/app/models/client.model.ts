@@ -10,4 +10,3 @@ export interface Client {
       lastConnection: Date|null;
       address: string;
 }
-  

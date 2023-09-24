@@ -18,6 +18,9 @@ const routes: Routes = [
 
   {path: 'app-login', component:LoginComponent},
   {path: 'app-register', component:RegisterComponent},
+
+  //para el login
+  { path: 'app-home/:id', component: HomeComponent },
   
   { path: '', redirectTo: '/app-login', pathMatch: 'full' },
   {path: 'app-home', component:HomeComponent },
