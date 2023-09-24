@@ -32,10 +32,9 @@ export class ClientService {
     return this.http.post(this.apiUrl, { email, password });
   }
 
-  //register
-  /*
-  login (email: string, password: string): Observable<any> {
-    return this.http.post(this.apiUrl, { email, password });
+
+  register (client: Client): Observable<any> {
+    return this.http.post(this.apiUrl, client);
   }
-  */
+
 }

@@ -1,13 +1,14 @@
 <section class="container col-xxl-8 px-4 py-5" id="home" style="padding: 0;">
-    <div class="row flex-lg-row-reverse align-items-center g-5 py-5" >
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
         <div class="col-lg-6 container">
             <h4 class="mb-3">Registrate</h4>
-            <form class="needs-validation" novalidate="">
+            <form class="needs-validation" novalidate="" #registerForm="ngForm" (ngSubmit)="register()">
                 <div class="row g-3">
 
                     <div class="col-12">
                         <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
+                        <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com"
+                            [(ngModel)]="client.email" name="email" required>
                         <div class="invalid-feedback">
                             Por favor ingrese un email valido.
                         </div>
@@ -15,8 +16,8 @@
 
                     <div class="col-sm-6">
                         <label for="firstName" class="form-label">Nombres</label>
-                        <input type="text" class="form-control" id="firstName" placeholder="Juan Antonio" value=""
-                            required="">
+                        <input type="text" class="form-control" id="firstName" placeholder="Juan" value=""
+                            [(ngModel)]="client.firstName" name="firstName" required>
                         <div class="invalid-feedback">
                             El nombre es requerido.
                         </div>
@@ -25,7 +26,7 @@
                     <div class="col-sm-6">
                         <label for="lastName" class="form-label">Apellidos</label>
                         <input type="text" class="form-control" id="lastName" placeholder="Perez Lopez" value=""
-                            required="">
+                            [(ngModel)]="client.lastName" name="lastName" required>
                         <div class="invalid-feedback">
                             El apellido es requerido.
                         </div>
@@ -34,7 +35,7 @@
                     <div class="col-sm-6">
                         <label for="birthDate" class="form-label">Fecha de Nacimiento</label>
                         <input type="date" class="form-control" id="birthDate" placeholder="12/12/2012" value=""
-                            required="">
+                            [(ngModel)]="client.birthDate" name="birthDate" required>
                         <div class="invalid-feedback">
                             El nombre es requerido.
                         </div>
@@ -42,7 +43,7 @@
 
                     <div class="col-sm-6">
                         <label for="gender" class="form-label">Género</label>
-                        <select class="form-select" id="gender" required="">
+                        <select class="form-select" id="gender" [(ngModel)]="client.gender" name="gender" required>
                             <option value="1">Agender</option>
                             <option value="2">Androgyno</option>
                             <option value="3">Bigender</option>
@@ -84,7 +85,8 @@
 
                     <div class="col-md-12">
                         <label for="address" class="form-label">Dirección</label>
-                        <input type="text" class="form-control" id="address" placeholder="Quiñones 1234" value="" required="">
+                        <input type="text" class="form-control" id="address" placeholder="Quiñones 1234" value=""
+                            [(ngModel)]="client.address" name="address" required>
                         <div class="invalid-feedback">
                             La dirección es requerida.
                         </div>
@@ -93,7 +95,7 @@
                     <div class="col-12">
                         <label for="cellphoneNumber" class="form-label">Número de Celular</label>
                         <input type="number" class="form-control" id="cellphoneNumber" placeholder="123456789" value=""
-                            required="">
+                            [(ngModel)]="client.cellphoneNumber" name="cellphoneNumber" required>
                         <div class="invalid-feedback">
                             El Número de Celular es requerido.
                         </div>
@@ -101,25 +103,23 @@
 
                     <div class="col-12">
                         <label for="password" class="form-label">Contraseña</label>
-                        <input type="password" class="form-control" id="password" placeholder="password" required=""
-                            minlength="8">
+                        <input type="password" class="form-control" id="password" placeholder="password"
+                            [(ngModel)]="client.password" name="password" required minlength="8">
                         <div class="invalid-feedback">
-                            Please enter your shipping address.
+                            La contraseña es requerida y debe tener al menos 8 caracteres.
                         </div>
                     </div>
 
                     <div class="col-12">
                         <label for="password2" class="form-label">Confirmar Contraseña</label>
-                        <input type="password" class="form-control" id="password2" placeholder="password" required=""
-                            minlength="8">
+                        <input type="password" class="form-control" id="password2" placeholder="password"
+                            [(ngModel)]="passwordConfirm" name="passwordConfirm" required minlength="8">
+                        <div class="invalid-feedback">
+                            La confirmación de contraseña es requerida y debe coincidir con la contraseña ingresada.
+                        </div>
                     </div>
 
-                    <div class="col-12 text-center">
-                        <button class="btn btn-primary  py-2" type="submit" pb-role="submit"
-                            routerLink="/app-login">Registrarse</button>
-                    </div>
-
-
+                    <button class="btn btn-primary py-2" type="submit">Registrarse</button>
                 </div>
 
             </form>
