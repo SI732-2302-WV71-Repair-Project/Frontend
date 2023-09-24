@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Client } from '../models/client.model';
 
 @Injectable({
   providedIn: 'root'
@@ -30,4 +31,9 @@ export class TechnicianService {
     const loginUrl = `${this.apiUrl}/login`;  // Suponiendo que este es el endpoint para iniciar sesión
     return this.http.post(loginUrl, { email, password });
   }
+
+  register (client: Client): Observable<any> {
+    return this.http.post(this.apiUrl, client);
+  }
+
 }
