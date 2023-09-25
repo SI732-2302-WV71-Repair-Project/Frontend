@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Client } from 'src/app/models/client.model';
 import { ClientService } from 'src/app/services/client.service';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-settings',
@@ -9,27 +10,36 @@ import { ClientService } from 'src/app/services/client.service';
 })
 export class SettingsComponent implements OnInit {
   client: Client = {
-      id: 0,
-      firstName: '',
-      lastName: '',
-      cellphoneNumber: '',
-      email: '',
-      password: '',
-      birthDate: null,
-      gender: '',
-      lastConnection: null,
-      address: ''
+    id: 0,
+    firstName: '',
+    lastName: '',
+    cellphoneNumber: '',
+    email: '',
+    password: '',
+    birthDate: null,
+    gender: '',
+    lastConnection: null,
+    address: ''
   };
 
-  constructor(private clientService: ClientService) { }
+  constructor(
+    private clientService: ClientService,
+    private authService: AuthService // Inyecta el servicio de autenticación
+  ) { }
 
   ngOnInit(): void {
+    // Obtener el ID del cliente actual desde el servicio de autenticación
+    const clientId = this.authService.getClientId();
 
-    this.obtenerClienteActual();
+    if (clientId !== null) {
+      // Utiliza el ID del cliente para obtener sus datos
+      this.obtenerClienteActual(clientId);
+    } else {
+      // Manejar el caso cuando clientId es null, por ejemplo, redirigir a una página de error o hacer algo adecuado.
+    }
   }
 
-  obtenerClienteActual() {
-    const clientId = 1; // Reemplaza con el ID del cliente que deseas obtener
+  obtenerClienteActual(clientId: number) {
     this.clientService.getClientById(clientId).subscribe(
       (data) => {
         this.client = { ...data }; // Copia los datos del cliente obtenido
@@ -47,7 +57,7 @@ export class SettingsComponent implements OnInit {
         this.client = res
         console.log('Cliente actualizado con éxito', res);
       },
-      error: (err: any)=>console.log(err)}
+      error: (err: any) => console.log(err)}
     );
   }
 }

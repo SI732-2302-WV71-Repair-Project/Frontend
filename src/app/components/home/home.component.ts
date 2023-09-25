@@ -1,26 +1,28 @@
-import { Component } from '@angular/core'
-import { ActivatedRoute } from '@angular/router'
-import { Subscription } from 'rxjs'
-import { Client } from 'src/app/models/client.model'
-import { ClientService } from 'src/app/services/client.service'
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
+import { Client } from 'src/app/models/client.model';
+import { ClientService } from 'src/app/services/client.service';
+import { AuthService } from 'src/app/services/auth.service'; // Importa el servicio de autenticación
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
-  client!: Client
-  private clientSubscription!: Subscription
+export class HomeComponent implements OnInit {
+  client!: Client;
+  private clientSubscription!: Subscription;
 
-  constructor(private clientService: ClientService, private route: ActivatedRoute) { }
+  constructor(
+    private clientService: ClientService,
+    private authService: AuthService, // Inyecta el servicio de autenticación
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
-    // Obtener el ID desde la URL
-    const clientIdString = this.route.snapshot.paramMap.get('id');
-
-    // Asegurar que clientIdString no sea nulo y convertirlo a un número
-    const clientId = clientIdString ? +clientIdString : null;
+    // Obtener el ID desde el servicio de autenticación
+    const clientId = this.authService.getClientId();
 
     if (clientId) {
       console.log(clientId);

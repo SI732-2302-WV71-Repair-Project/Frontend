@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ClientService } from 'src/app/services/client.service';
-
+import { AuthService } from 'src/app/services/auth.service';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -25,13 +25,16 @@ export class RegisterComponent {
 
   constructor(
     private clientService:ClientService,
+    private authService:AuthService,
     private router: Router
   ) { }
 
   register(): void {
     this.clientService.register(this.client).subscribe(
       (data) => {
+        console.log(data);
         if(data && data.id){
+          this.authService.setClientId(data.id);
           this.router.navigate(['/app-home', data.id])
         }
         else{
