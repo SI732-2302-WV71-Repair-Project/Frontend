@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit{
         console.log(data);
         if(data && data.id){
           this.authService.setClientId(data.id);
-
+          console.log(this.authService.getClientId());
           this.router.navigate(['/app-home', data.id])
         }
         else{
