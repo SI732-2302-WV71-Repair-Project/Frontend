@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'repair-project';
+  
+  public isUserLoggedIn: boolean = false;
+
+  constructor() { }
+
+  setLoginStatus(status: boolean):void{
+    this.isUserLoggedIn = status;
+  }
 }

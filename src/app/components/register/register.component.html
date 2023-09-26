@@ -1,6 +1,6 @@
-<section class="container col-xxl-8 px-4 py-5" id="home" style="padding: 0;">
-    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-        <div class="col-lg-6 container">
+<section class="container col-xxl-8 px-4 py-5 register" id="home" style="padding: 0;">
+    <div class="row flex-lg-row-reverse align-items-center  register_container">
+        <div class="col-lg-6 container register_form">
             <h4 class="mb-3">Registrate</h4>
             <form class="needs-validation" novalidate="" #registerForm="ngForm" (ngSubmit)="register()">
                 <div class="row g-3">
@@ -125,6 +125,11 @@
             </form>
         </div>
         <div class="col-10 col-sm-8 col-lg-6">
+
+            <button class="btn btn-primary" routerLink="/app-login">
+                Atras
+            </button>
+
             <img src="./../../../assets/images/LOGO.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
                 width="700" height="500" loading="lazy">
         </div>
