@@ -17,8 +17,17 @@
             </select>
         </div>
 
-        <!-- Tipo de dispositivo -->
+        <!-- Modelo del dispositivo -->
         <div class="mb-3 col-sm-6">
+            <label for="deviceModel" class="form-label">Modelo del dispositivo</label>
+            <input [(ngModel)]="deviceModel" name="deviceModel" id="deviceModel" class="form-control" required>
+            <div *ngIf="repairForm.submitted && !repairForm.form?.get('deviceModel')?.valid" class="text-danger">
+                El modelo es requerido.
+            </div>            
+        </div>
+
+        <!-- Tipo de dispositivo -->
+        <div class="mb-3">
             <label for="deviceType" class="form-label">Tipo de dispositivo</label>
             <select [(ngModel)]="deviceType" name="deviceType" id="deviceType" class="form-control" required>
                 <option value="" disabled selected>Selecciona un tipo</option>
