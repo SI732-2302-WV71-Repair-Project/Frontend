@@ -26,6 +26,9 @@ export class LoginComponent implements OnInit{
     lastConnection: null,
     address: ''
   }
+
+  hide = true; 
+
   constructor(
     private clientService: ClientService,
     private authService: AuthService,
@@ -33,6 +36,10 @@ export class LoginComponent implements OnInit{
   ) { }
 
   ngOnInit(): void {  }
+
+  toggleHide() {  // <-- Agregar este método
+    this.hide = !this.hide;
+  }
 
   login(): void {
     this.client.email=this.email;
@@ -42,9 +49,10 @@ export class LoginComponent implements OnInit{
       (data) => {
         console.log(data);
         if(data && data.id){
-          this.authService.setClientId(data.id);
-          console.log(this.authService.getClientId());
+          this.authService.setClientId(data.id)
+          console.log(this.authService.getClientId())
           this.router.navigate(['/app-home', data.id])
+          window.dispatchEvent(new Event('userLoggedIn'))
         }
         else{
           alert('Usuario o contraseña incorrectos')

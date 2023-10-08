@@ -8,7 +8,15 @@ import { Component } from '@angular/core';
 export class AppComponent {
   public isUserLoggedIn: boolean = false
 
-  constructor() {}
+  constructor() {
+    window.addEventListener('userLoggedIn', () => {
+      this.isUserLoggedIn = true;
+    });
+
+    window.addEventListener('userLoggedOut', () => {
+      this.isUserLoggedIn = false;
+    });
+  }
 
   setLoginStatus(status: boolean): void {
     this.isUserLoggedIn = status
