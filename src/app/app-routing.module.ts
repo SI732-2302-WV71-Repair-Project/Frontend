@@ -12,6 +12,7 @@ import { MyTechniciansComponent } from './components/my-technicians/my-technicia
 import { SettingsComponent } from './components/settings/settings.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { NewDeviceComponent } from './components/new-device/new-device.component';
 
 const routes: Routes = [
 
@@ -32,6 +33,7 @@ const routes: Routes = [
   { path: 'app-reports', component: ReportsComponent },
   {path:'app-my-technicians', component:MyTechniciansComponent},
   { path: 'app-settings', component:SettingsComponent},
+  {path:'app-new-device', component:NewDeviceComponent},
   
   {path: 'app-footer', component:FooterComponent}
 ];

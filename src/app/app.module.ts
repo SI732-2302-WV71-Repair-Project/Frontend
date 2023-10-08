@@ -17,6 +17,7 @@ import { MyTechniciansComponent } from './components/my-technicians/my-technicia
 import { SettingsComponent } from './components/settings/settings.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { NewDeviceComponent } from './components/new-device/new-device.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { RegisterComponent } from './components/register/register.component';
     MyTechniciansComponent,
     SettingsComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    NewDeviceComponent
   ],
   imports: [
     FormsModule,
