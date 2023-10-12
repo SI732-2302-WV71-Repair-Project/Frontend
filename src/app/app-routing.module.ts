@@ -15,6 +15,9 @@ import { RegisterComponent } from './components/register/register.component';
 import { NewDeviceComponent } from './components/new-device/new-device.component';
 import { EditDeviceComponent } from './components/edit-device/edit-device.component';
 import { ChatClientTechnicianComponent } from './components/chat-client-technician/chat-client-technician.component';
+import {
+  PaymentEquipmentRepairComponent
+} from "./components/payment-equipment-repair/payment-equipment-repair.component";
 
 const routes: Routes = [
 
@@ -24,7 +27,7 @@ const routes: Routes = [
 
   //para el login
   { path: 'app-home/:id', component: HomeComponent },
-  
+
   { path: '', redirectTo: '/app-login', pathMatch: 'full' },
   {path: 'app-home', component:HomeComponent },
   { path: 'app-navbar', component: NavbarComponent },
@@ -39,8 +42,9 @@ const routes: Routes = [
   {path: 'app-edit-device', component: EditDeviceComponent},
 
   {path: 'app-chat-client-technician', component:ChatClientTechnicianComponent},
-  
-  {path: 'app-footer', component:FooterComponent}
+
+  {path: 'app-footer', component:FooterComponent},
+  {path: 'app-payment-equipment-repair', component:PaymentEquipmentRepairComponent}
 ];
 
 @NgModule({

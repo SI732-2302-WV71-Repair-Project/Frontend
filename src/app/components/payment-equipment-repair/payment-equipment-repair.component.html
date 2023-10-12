@@ -1,0 +1,26 @@
+<div class="container">
+    <h1>Sistema de Pagos Simple</h1>
+
+    <form [formGroup]="paymentForm" (ngSubmit)="onSubmit()">
+        <mat-form-field>
+            <input matInput placeholder="Monto" formControlName="amount">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Tipo de Servicio</mat-label>
+            <mat-select formControlName="serviceType">
+                <mat-option value="diagnostico">Diagnóstico</mat-option>
+                <mat-option value="reparacion">Reparación</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Método de Pago</mat-label>
+            <mat-select formControlName="paymentMethod">
+                <!-- Agrega las opciones de método de pago que desees -->
+                <mat-option value="tarjeta">Tarjeta de Crédito</mat-option>
+                <mat-option value="paypal">PayPal</mat-option>
+                <!-- Agrega más opciones si es necesario -->
+            </mat-select>
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit">Realizar Pago</button>
+    </form>
+</div>

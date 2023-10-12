@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -20,8 +19,17 @@ import { RegisterComponent } from './components/register/register.component';
 import { NewDeviceComponent } from './components/new-device/new-device.component';
 import { EditDeviceComponent } from './components/edit-device/edit-device.component';
 import { ChatClientTechnicianComponent } from './components/chat-client-technician/chat-client-technician.component';
+import { PaymentEquipmentRepairComponent, SuccessDialogComponent } from './components/payment-equipment-repair/payment-equipment-repair.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatInputModule} from "@angular/material/input";
+import {MatButtonModule} from "@angular/material/button";
+import {MatSelectModule} from "@angular/material/select";
+
 
 @NgModule({
+
   declarations: [
     AppComponent,
     NavbarComponent,
@@ -38,13 +46,21 @@ import { ChatClientTechnicianComponent } from './components/chat-client-technici
     RegisterComponent,
     NewDeviceComponent,
     EditDeviceComponent,
-    ChatClientTechnicianComponent
+    ChatClientTechnicianComponent,
+    PaymentEquipmentRepairComponent,
+    SuccessDialogComponent
   ],
   imports: [
     FormsModule,
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatButtonModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
