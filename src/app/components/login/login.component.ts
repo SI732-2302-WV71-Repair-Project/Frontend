@@ -4,6 +4,7 @@ import { Subscription } from 'rxjs';
 import { Client } from 'src/app/models/client.model';
 import { ClientService } from 'src/app/services/client.service';
 import { AuthService } from 'src/app/services/auth.service';
+import {UserService} from "../../services/user.service";
 
 @Component({
   selector: 'app-login',
@@ -11,10 +12,9 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit{
-  
-  email: string = ''
-  password: string = ''
-  client = {
+
+  userType : string
+  user = {
     id: 0,
     firstName: '',
     lastName: '',
@@ -23,17 +23,22 @@ export class LoginComponent implements OnInit{
     password: '',
     birthDate: null,
     gender: '',
-    lastConnection: null,
-    address: ''
-  }
+    lastConnection: new Date(),
+    address: '',
+    district: ''
+  };
 
-  hide = true; 
+  hide = true;
 
   constructor(
     private clientService: ClientService,
+    private userService: UserService,
     private authService: AuthService,
     private router: Router
-  ) { }
+  )
+  {
+    this.userType = 'cliente'
+  }
 
   ngOnInit(): void {  }
 
@@ -42,15 +47,12 @@ export class LoginComponent implements OnInit{
   }
 
   login(): void {
-    this.client.email=this.email;
-    this.client.password=this.password;
-    console.log(this.client);
-    this.clientService.login(this.client).subscribe(
+    console.log('user', this.user);
+    this.userService.login(this.user).subscribe(
       (data) => {
         console.log(data);
         if(data && data.id){
-          this.authService.setClientId(data.id)
-          console.log(this.authService.getClientId())
+          this.authService.setUserId(data.id)
           this.router.navigate(['/app-home', data.id])
           window.dispatchEvent(new Event('userLoggedIn'))
         }

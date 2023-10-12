@@ -10,10 +10,29 @@ import { ClientService } from 'src/app/services/client.service';
 })
 export class EditDeviceComponent {
   device: Device = {
+    id: 0,
     brand: '',
     model: '',
+    model_image: '',
+    client: {
+      id: 0,
+      user: {
+        id: 0,
+        firstName: '',
+        lastName: '',
+        cellphoneNumber: '',
+        email: '',
+        password: '',
+        birthDate: null,
+        gender: '',
+        lastConnection: null,
+        address: '',
+        district: ''
+      },
+      plan: ''
+    },
     type: '',
-    problemDescription: ''
+    problem: ''
   };
 
   constructor(

@@ -1,6 +1,11 @@
+import {Client} from "./client.model";
+
 export interface Device {
-    brand: string;            // Marca del dispositivo
-    model: string;            // Modelo del dispositivo
-    type: string;             // Tipo de dispositivo
-    problemDescription: string;  // Descripción del problema
+    id: number;
+    brand: string;
+    model: string;
+    model_image: string;
+    client: Client;
+    problem: string;
+    type: string;
 }
