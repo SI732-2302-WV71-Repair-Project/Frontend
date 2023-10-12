@@ -1,5 +1,7 @@
-<div class="container">
-    <form #repairForm="ngForm" class="row g-3">
+<div class="container mt-5">
+    <h3 class="mb-4">Añadir Nuevo Dispositivo</h3>
+    <form #deviceForm="ngForm" class="row g-3">
+
         <!-- Marca del dispositivo -->
         <div class="mb-3 col-sm-6">
             <label for="deviceBrand" class="form-label">Marca del dispositivo</label>
@@ -21,7 +23,7 @@
         <div class="mb-3 col-sm-6">
             <label for="deviceModel" class="form-label">Modelo del dispositivo</label>
             <input [(ngModel)]="deviceModel" name="deviceModel" id="deviceModel" class="form-control" required>
-            <div *ngIf="repairForm.submitted && !repairForm.form?.get('deviceModel')?.valid" class="text-danger">
+            <div *ngIf="deviceForm.submitted && !deviceForm.form?.get('deviceModel')?.valid" class="text-danger">
                 El modelo es requerido.
             </div>            
         </div>
@@ -47,18 +49,20 @@
                 class="form-control" rows="3" required></textarea>
         </div>
 
-        <!-- Botón de solicitud de reparación -->
-        <button type="button" class="btn btn-primary" (click)="requestRepair()" [disabled]="!repairForm.valid">
-            Solicitar reparación
-        </button>
+        <!-- Botón para añadir dispositivo -->
+        <div class="col-12">
+            <button type="button" class="btn btn-primary" (click)="addDevice()" [disabled]="!deviceForm.valid">
+                Añadir Dispositivo
+            </button>
+        </div>
     </form>
 
-    <!-- Confirmación de solicitud de reparación -->
+    <!-- Confirmación para añadir dispositivo -->
     <div *ngIf="showConfirmation" class="mt-3">
         <div class="alert alert-primary" role="alert">
-            ¿Desea solicitar una reparación?
-            <button type="button" class="btn btn-success ms-3" (click)="confirmRepair()">Yes</button>
-            <button type="button" class="btn btn-danger ms-3" (click)="cancelRepair()">No</button>
+            ¿Desea añadir este dispositivo?
+            <button type="button" class="btn btn-success ms-3" (click)="confirmAdd()">Sí</button>
+            <button type="button" class="btn btn-danger ms-3" (click)="cancelAdd()">No</button>
         </div>
     </div>
 </div>

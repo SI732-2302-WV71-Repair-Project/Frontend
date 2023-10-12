@@ -18,6 +18,7 @@ import { SettingsComponent } from './components/settings/settings.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { NewDeviceComponent } from './components/new-device/new-device.component';
+import { EditDeviceComponent } from './components/edit-device/edit-device.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { NewDeviceComponent } from './components/new-device/new-device.component
     SettingsComponent,
     LoginComponent,
     RegisterComponent,
-    NewDeviceComponent
+    NewDeviceComponent,
+    EditDeviceComponent
   ],
   imports: [
     FormsModule,

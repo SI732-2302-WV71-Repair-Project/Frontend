@@ -1,0 +1,42 @@
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header">
+            Editar Dispositivo
+        </div>
+        <div class="card-body">
+            <form #deviceForm="ngForm" (ngSubmit)="onSubmit()" class="row g-3">
+
+                <!-- Marca del dispositivo -->
+                <div class="mb-3 col-md-6">
+                    <label for="brand" class="form-label">Marca del dispositivo</label>
+                    <input type="text" id="brand" [(ngModel)]="device.brand" name="brand" class="form-control" required>
+                </div>
+
+                <!-- Modelo del dispositivo -->
+                <div class="mb-3 col-md-6">
+                    <label for="model" class="form-label">Modelo del dispositivo</label>
+                    <input type="text" id="model" [(ngModel)]="device.model" name="model" class="form-control" required>
+                </div>
+
+                <!-- Tipo de dispositivo -->
+                <div class="mb-3 col-md-6">
+                    <label for="type" class="form-label">Tipo de dispositivo</label>
+                    <input type="text" id="type" [(ngModel)]="device.type" name="type" class="form-control" required>
+                </div>
+
+                <!-- Descripción del problema -->
+                <div class="mb-3 col-md-12">
+                    <label for="problemDescription" class="form-label">Descripción del problema</label>
+                    <textarea id="problemDescription" [(ngModel)]="device.problemDescription" name="problemDescription"
+                        class="form-control" rows="3" required></textarea>
+                </div>
+
+                <!-- Botones de actualizar y eliminar -->
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-primary me-2">Actualizar</button>
+                    <button type="button" class="btn btn-danger" (click)="onDelete()">Eliminar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

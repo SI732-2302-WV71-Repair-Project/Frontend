@@ -12,25 +12,27 @@ export class NewDeviceComponent {
   problemDescription = '';
   showConfirmation = false;
 
-  requestRepair(): void {
-    if (this.problemDescription) {
+  addDevice(): void {
+    if (this.deviceBrand && this.deviceModel && this.deviceType && this.problemDescription) {
       this.showConfirmation = true;
     }
   }
 
-  confirmRepair(): void {
-    // confirmar la reparación
-    console.log('Reparación solicitada:', this.problemDescription);
+  confirmAdd(): void {
+    // Aquí normalmente harías una llamada a un servicio para añadir el dispositivo
+    console.log('Dispositivo añadido:', this.deviceBrand, this.deviceModel, this.deviceType, this.problemDescription);
     this.resetForm();
   }
 
-  cancelRepair(): void {
-    // cancelar la reparación
-    console.log('Reparación cancelada');
+  cancelAdd(): void {
+    console.log('Añadir dispositivo cancelado');
     this.resetForm();
   }
 
   resetForm(): void {
+    this.deviceBrand = '';
+    this.deviceModel = '';
+    this.deviceType = '';
     this.problemDescription = '';
     this.showConfirmation = false;
   }
