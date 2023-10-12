@@ -19,6 +19,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { NewDeviceComponent } from './components/new-device/new-device.component';
 import { EditDeviceComponent } from './components/edit-device/edit-device.component';
+import { ChatClientTechnicianComponent } from './components/chat-client-technician/chat-client-technician.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { EditDeviceComponent } from './components/edit-device/edit-device.compon
     LoginComponent,
     RegisterComponent,
     NewDeviceComponent,
-    EditDeviceComponent
+    EditDeviceComponent,
+    ChatClientTechnicianComponent
   ],
   imports: [
     FormsModule,

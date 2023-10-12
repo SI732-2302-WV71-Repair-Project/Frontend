@@ -1,0 +1,23 @@
+.chat-container {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.client-message {
+    text-align: right;
+    background-color: #e6f7ff;
+    padding: 5px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.technician-message {
+    text-align: left;
+    background-color: #f2f2f2;
+    padding: 5px;
+    border-radius: 8px;
+    display: inline-block;
+}

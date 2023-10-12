@@ -14,6 +14,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { NewDeviceComponent } from './components/new-device/new-device.component';
 import { EditDeviceComponent } from './components/edit-device/edit-device.component';
+import { ChatClientTechnicianComponent } from './components/chat-client-technician/chat-client-technician.component';
 
 const routes: Routes = [
 
@@ -36,6 +37,8 @@ const routes: Routes = [
   { path: 'app-settings', component:SettingsComponent},
   {path:'app-new-device', component:NewDeviceComponent},
   {path: 'app-edit-device', component: EditDeviceComponent},
+
+  {path: 'app-chat-client-technician', component:ChatClientTechnicianComponent},
   
   {path: 'app-footer', component:FooterComponent}
 ];

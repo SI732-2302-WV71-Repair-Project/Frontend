@@ -1,0 +1,25 @@
+<div class="container mt-5">
+    <h3 class="mb-4">Chat con Técnico</h3>
+
+    <!-- Notificación -->
+    <div *ngIf="notificationMessage" class="alert alert-primary" role="alert">
+        {{ notificationMessage }}
+        <button type="button" class="btn btn-success ms-3" (click)="openChat()">Abrir chat</button>
+    </div>
+
+    <!-- Chat -->
+    <div class="chat-container" *ngIf="chatMessages.length">
+        <div *ngFor="let message of chatMessages" class="mb-2">
+            <div [class]="message.sender === 'client' ? 'client-message' : 'technician-message'">
+                <strong>{{ message.sender === 'client' ? 'Yo: ' : 'Técnico: ' }}</strong>
+                {{ message.content }}
+            </div>
+        </div>
+    </div>
+
+    <!-- Input para enviar mensaje -->
+    <div class="input-group mt-3">
+        <input type="text" class="form-control" placeholder="Escribir mensaje..." [(ngModel)]="newMessage">
+        <button class="btn btn-primary" type="button" (click)="sendMessage()">Enviar</button>
+    </div>
+</div>
