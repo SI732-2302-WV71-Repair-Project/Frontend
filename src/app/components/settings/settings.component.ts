@@ -11,15 +11,20 @@ import { AuthService } from 'src/app/services/auth.service';
 export class SettingsComponent implements OnInit {
   client: Client = {
     id: 0,
-    firstName: '',
-    lastName: '',
-    cellphoneNumber: '',
-    email: '',
-    password: '',
-    birthDate: null,
-    gender: '',
-    lastConnection: null,
-    address: ''
+    user: {
+      id: 0,
+      firstName: '',
+      lastName: '',
+      cellphoneNumber: '',
+      email: '',
+      password: '',
+      birthDate: null,
+      gender: '',
+      lastConnection: null,
+      address: '',
+      district: ''
+    },
+    plan: ''
   };
 
   constructor(

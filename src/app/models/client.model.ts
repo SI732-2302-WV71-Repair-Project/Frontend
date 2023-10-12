@@ -1,12 +1,8 @@
+import {UserModel} from "./user.model";
+import {Device} from "./device.model";
+
 export interface Client {
       id: number;
-      firstName: string;
-      lastName: string;
-      cellphoneNumber: string;
-      email: string;
-      password: string;
-      birthDate: Date|null;
-      gender: string;
-      lastConnection: Date|null;
-      address: string;
+      user: UserModel;
+      plan: string;
 }

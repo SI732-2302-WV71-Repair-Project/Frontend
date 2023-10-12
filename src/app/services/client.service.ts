@@ -8,7 +8,7 @@ import { Device } from '../models/device.model';
   providedIn: 'root'
 })
 export class ClientService {
-  private apiUrl = '/api/users';
+  private apiUrl = '/api/client';
 
   constructor(private http: HttpClient) { }
 
@@ -26,11 +26,6 @@ export class ClientService {
     console.log(url);
     console.log(updatedClientData);
     return this.http.put(url, updatedClientData);
-  }
-
-  login(client: Client): Observable<any> {
-    // Hacer una solicitud GET con parámetros de consulta para buscar al cliente por email y contraseña
-    return this.http.post(`${this.apiUrl}/login`, client);
   }
 
 

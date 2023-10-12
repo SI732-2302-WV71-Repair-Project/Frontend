@@ -4,7 +4,7 @@
         <div class="row g-3">
             <div class="col-sm-6">
                 <label for="firstName" class="form-label">Nombres</label>
-                <input type="text" class="form-control" id="firstName" name="firstName" [(ngModel)]="client.firstName" required>
+                <input type="text" class="form-control" id="firstName" name="firstName" [(ngModel)]="client.user.firstName" required>
                 <div class="invalid-feedback">
                     El nombre es requerido.
                 </div>
@@ -12,7 +12,7 @@
 
             <div class="col-sm-6">
                 <label for="lastName" class="form-label">Apellidos</label>
-                <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="client.lastName" required>
+                <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="client.user.lastName" required>
                 <div class="invalid-feedback">
                     El apellido es requerido.
                 </div>
@@ -20,7 +20,7 @@
 
             <div class="col-12">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" name="email" [(ngModel)]="client.email" required>
+                <input type="email" class="form-control" id="email" name="email" [(ngModel)]="client.user.email" required>
                 <div class="invalid-feedback">
                     Por favor ingrese un email válido.
                 </div>
@@ -28,7 +28,7 @@
 
             <div class="col-12">
                 <label for="password" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="password" name="password" [(ngModel)]="client.password" required>
+                <input type="password" class="form-control" id="password" name="password" [(ngModel)]="client.user.password" required>
                 <div class="invalid-feedback">
                     La contraseña es requerida.
                 </div>
@@ -36,7 +36,7 @@
 
             <div class="col-12">
                 <label for="cellphoneNumber" class="form-label">Número de Celular</label>
-                <input type="text" class="form-control" id="cellphoneNumber" name="cellphoneNumber" [(ngModel)]="client.cellphoneNumber" required>
+                <input type="text" class="form-control" id="cellphoneNumber" name="cellphoneNumber" [(ngModel)]="client.user.cellphoneNumber" required>
                 <div class="invalid-feedback">
                     El número de celular es requerido.
                 </div>
@@ -44,7 +44,7 @@
 
             <div class="col-md-6">
                 <label for="address" class="form-label">Dirección</label>
-                <input type="text" class="form-control" id="address" name="address" [(ngModel)]="client.address" required>
+                <input type="text" class="form-control" id="address" name="address" [(ngModel)]="client.user.address" required>
                 <div class="invalid-feedback">
                     La dirección es requerida.
                 </div>
