@@ -1,156 +1,44 @@
+<mat-spinner *ngIf="showSpinner" class="custom-spinner" [diameter]="50" [strokeWidth]="5"></mat-spinner>
+
+<div class="overlay" *ngIf="showSpinner"></div>
 <section>
   <div class="container px-4 py-5" id="icon-grid">
-    <h2 class="pb-2 border-bottom">Celular con la pantalla rota en la parte inferior</h2>
-
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
-      <div class="col d-flex align-items-start">
-        <i class="bi bi-search text-body-secondary flex-shrink-0 me-3"></i>
-        <div>
-          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Diagnostico</h3>
-          <p>
-            El celular se cayó y se rompió la pantalla en la parte inferior, el
-            celular funciona bien, pero la pantalla está rota.
-          </p>
-        </div>
-      </div>
-      <div class="col d-flex align-items-start">
-        <i class="bi bi-calendar3 text-body-secondary flex-shrink-0 me-3"></i>
-        <div>
-          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Procedimiento</h3>
-          <p>
-            Se procederá a cambiar la pantalla del celular, se le hará un
-            mantenimiento general y se le hará una limpieza.
-          </p>
-        </div>
-      </div>
-      <div class="col d-flex align-items-start">
-        <i class="bi bi-tools text-body-secondary flex-shrink-0 me-3"></i>
-        <div>
-          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">
-            Reparando el celular
-          </h3>
-          <p>
-            Se cambió la pantalla, se le hizo un mantenimiento general y se le
-            hizo una limpieza.
-          </p>
-        </div>
-      </div>
-      <div class="col d-flex align-items-start">
-        <i class="bi bi-rocket-takeoff-fill text-body-secondary flex-shrink-0 me-3"></i>
-        <div>
-          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">
-            Reparación exitosa
-          </h3>
-          <p>
-            El celular quedó como nuevo, la pantalla quedó como nueva, el
-            celular funciona perfectamente.
-          </p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-
-  <div class="container px-4 py-5" id="icon-grid">
-    <h2 class="pb-2 border-bottom">Celular con la pantalla rota en la parte superior</h2>
-
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
-      <div class="col d-flex align-items-start">
-        <i class="bi bi-search text-body-secondary flex-shrink-0 me-3"></i>
-        <div>
-          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Diagnostico</h3>
-          <p>
-            El celular se cayó y se rompió la pantalla en la parte inferior, el
-            celular funciona bien, pero la pantalla está rota.
-          </p>
-        </div>
-      </div>
-      <div class="col d-flex align-items-start">
-        <i class="bi bi-calendar3 text-body-secondary flex-shrink-0 me-3"></i>
-        <div>
-          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Procedimiento</h3>
-          <p>
-            Se procederá a cambiar la pantalla del celular, se le hará un
-            mantenimiento general y se le hará una limpieza.
-          </p>
-        </div>
-      </div>
-      <div class="col d-flex align-items-start">
-        <i class="bi bi-tools text-body-secondary flex-shrink-0 me-3"></i>
-        <div>
-          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">
-            Reparando el celular
-          </h3>
-          <p>
-            Se cambió la pantalla, se le hizo un mantenimiento general y se le
-            hizo una limpieza.
-          </p>
-        </div>
-      </div>
-      <div class="col d-flex align-items-start">
-        <i class="bi bi-rocket-takeoff-fill text-body-secondary flex-shrink-0 me-3"></i>
-        <div>
-          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">
-            Reparación exitosa
-          </h3>
-          <p>
-            El celular quedó como nuevo, la pantalla quedó como nueva, el
-            celular funciona perfectamente.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container px-4 py-5" id="icon-grid">
-    <h2 class="pb-2 border-bottom">Laptop con la pantalla negra en la parte superior</h2>
-
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
-      <div class="col d-flex align-items-start">
-        <i class="bi bi-search text-body-secondary flex-shrink-0 me-3"></i>
-        <div>
-          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Diagnostico</h3>
-          <p>
-            El celular se cayó y se rompió la pantalla en la parte inferior, el
-            celular funciona bien, pero la pantalla está rota.
-          </p>
-        </div>
-      </div>
-      <div class="col d-flex align-items-start">
-        <i class="bi bi-calendar3 text-body-secondary flex-shrink-0 me-3"></i>
-        <div>
-          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Procedimiento</h3>
-          <p>
-            Se procederá a cambiar la pantalla del celular, se le hará un
-            mantenimiento general y se le hará una limpieza.
-          </p>
-        </div>
-      </div>
-      <div class="col d-flex align-items-start">
-        <i class="bi bi-tools text-body-secondary flex-shrink-0 me-3"></i>
-        <div>
-          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">
-            Reparando el celular
-          </h3>
-          <p>
-            Se cambió la pantalla, se le hizo un mantenimiento general y se le
-            hizo una limpieza.
-          </p>
-        </div>
-      </div>
-      <div class="col d-flex align-items-start">
-        <i class="bi bi-rocket-takeoff-fill text-body-secondary flex-shrink-0 me-3"></i>
-        <div>
-          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">
-            Reparación exitosa
-          </h3>
-          <p>
-            El celular quedó como nuevo, la pantalla quedó como nueva, el
-            celular funciona perfectamente.
-          </p>
+    <div class="row" *ngFor="let report of reports">
+      <div class="col">
+        <h2 class="pb-2 border-bottom">{{ report.title }}</h2>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+          <div class="col d-flex align-items-start">
+            <i class="bi bi-search text-body-secondary flex-shrink-0 me-3"></i>
+            <div>
+              <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Diagnóstico</h3>
+              <p>{{ report.diagnosis }}</p>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <i class="bi bi-calendar3 text-body-secondary flex-shrink-0 me-3"></i>
+            <div>
+              <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Procedimiento</h3>
+              <p>{{ report.procedure }}</p>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <i class="bi bi-tools text-body-secondary flex-shrink-0 me-3"></i>
+            <div>
+              <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Reparación del celular</h3>
+              <p>{{ report.repair }}</p>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <img [src]="report.image" alt="Imagen del informe">
+          </div>
+          <div class="col d-flex align-items-start">
+            <!-- ... Otro contenido del informe ... -->
+            <button mat-button (click)="downloadReport()">Descargar</button>
+          </div>
+          
         </div>
       </div>
     </div>
   </div>
 </section>
+

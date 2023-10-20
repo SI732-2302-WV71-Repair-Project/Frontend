@@ -1,0 +1,17 @@
+.custom-spinner {
+    position: fixed; /* Posición fija para que esté por encima de todo el contenido */
+    top: 50%; /* Centrar verticalmente */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translate(-50%, -50%); /* Centrar completamente */
+    z-index: 9999; /* Asegurarse de que esté en la parte superior */
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    z-index: 9998; /* Debe estar detrás del spinner pero delante del contenido */
+    pointer-events: auto; /* Evitar interacción con elementos subyacentes */
+  }

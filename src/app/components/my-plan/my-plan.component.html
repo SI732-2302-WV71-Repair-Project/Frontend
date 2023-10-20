@@ -1,70 +1,69 @@
 <section class="container py-3">
     <h2 class="display-6 text-center mb-4">Tu Plan</h2>
     <div class="table-responsive">
-        <table class="table text-center">
-            <thead>
-                <tr>
-                    <th style="width: 34%;"></th>
-                    <th style="width: 22%;">
-                        Free
-                    </th>
-                    <th style="width: 22%;">
-                        Premium
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row" class="text-start">
-                        Dispositivos
-                    </th>
-                    <td><i class="bi bi-check-lg"></i></td>
-                    <td><i class="bi bi-check-lg text-primary"></i></td>
-                </tr>
-
-            </tbody>
-
-            <tbody>
-                <tr>
-                    <th scope="row" class="text-start">
-                        Técnicos
-                    </th>
-                    <td><i class="bi bi-check-lg"></i></td>
-                    <td><i class="bi bi-check-lg text-primary"></i></td>
-                </tr>
-            </tbody>
-
-            <tbody>
-                <tr>
-                    <th scope="row" class="text-start">
-                        Soporte
-                    </th>
-                    <td></td>
-                    <td><i class="bi bi-check-lg text-primary"></i></td>
-                </tr>
-                <tr>
-                    <th scope="row" class="text-start">
-                        Garantía
-                    </th>
-                    <td></td>
-                    <td><i class="bi bi-check-lg text-primary"></i></td>
-                </tr>
-                <tr>
-                    <th scope="row" class="text-start">
-                        Asesoramiento
-                    </th>
-                    
-                    <td></td>
-                    <td><i class="bi bi-check-lg text-primary text-primary"></i></td>
-                </tr>
-                <tr>
-                    <th scope="row" class="text-start">
-                        Delivery
-                    </th>
-                    <td></td>
-                    <td><i class="bi bi-check-lg text-primary"></i></td>
-                </tr>
-            </tbody>
-        </table>
+      <table class="table text-center">
+        <!-- Encabezado de la tabla (sin cambios) -->
+        <thead>
+          <tr>
+            <th style="width: 34%;"></th>
+            <th style="width: 22%;">Free</th>
+            <th style="width: 22%;">Premium</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Fila de Dispositivos (sin cambios) -->
+          <tr>
+            <th scope="row" class="text-start">Dispositivos</th>
+            <td><i class="bi bi-check-lg"></i></td>
+            <td><i class="bi bi-check-lg text-primary"></i></td>
+          </tr>
+        </tbody>
+        <tbody>
+          <!-- Fila de Técnicos (sin cambios) -->
+          <tr>
+            <th scope="row" class="text-start">Técnicos</th>
+            <td><i class="bi bi-check-lg"></i></td>
+            <td><i class="bi bi-check-lg text-primary"></i></td>
+          </tr>
+        </tbody>
+        <tbody>
+          <!-- Fila de Soporte (con cambios) -->
+          <tr>
+            <th scope="row" class="text-start">Soporte</th>
+            <td></td>
+            <td><i class="bi bi-check-lg text-primary"></i></td>
+          </tr>
+          <!-- Fila de Garantía (con cambios) -->
+          <tr>
+            <th scope="row" class="text-start">Garantía</th>
+            <td></td>
+            <td><i class="bi bi-check-lg text-primary"></i></td>
+          </tr>
+          <!-- Fila de Asesoramiento (con cambios) -->
+          <tr>
+            <th scope="row" class="text-start">Asesoramiento</th>
+            <td></td>
+            <td><i class="bi bi-check-lg text-primary text-primary"></i></td>
+          </tr>
+          <!-- Fila de Delivery (con cambios) -->
+          <tr>
+            <th scope="row" class="text-start">Delivery</th>
+            <td></td>
+            <td><i class="bi bi-check-lg text-primary"></i></td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <!-- Elementos para Cambio de Plan o Cancelación -->
+      <div *ngIf="plan === '0'">
+        <!-- Botón para Cambiarse al Plan Premium -->
+        <button class="btn btn-primary" (click)="cambiarPlan()">Cámbiate ya al plan premium</button>
+      </div>
+      <div *ngIf="plan === '1'">
+        <!-- Mensaje para Usuarios Premium y Opción de Cancelación -->
+        <p>Usted ya es premium, disfrute de nuestros beneficios.</p>
+        <button class="btn btn-danger" (click)="cancelarSuscripcion()">Cancelar suscripción</button>
+      </div>
     </div>
-</section>
+  </section>
+  

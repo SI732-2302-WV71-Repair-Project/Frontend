@@ -26,6 +26,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
 import {MatSelectModule} from "@angular/material/select";
+import { TechnicianDialogComponent } from './components/technician-dialog/technician-dialog.component';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { DownloadReportDialogComponent } from './components/download-report-dialog/download-report-dialog.component';
 
 
 @NgModule({
@@ -48,12 +51,15 @@ import {MatSelectModule} from "@angular/material/select";
     EditDeviceComponent,
     ChatClientTechnicianComponent,
     PaymentEquipmentRepairComponent,
-    SuccessDialogComponent
+    SuccessDialogComponent,
+    TechnicianDialogComponent,
+    DownloadReportDialogComponent
   ],
   imports: [
     FormsModule,
     BrowserModule,
     HttpClientModule,
+    MatProgressSpinnerModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatDialogModule,
