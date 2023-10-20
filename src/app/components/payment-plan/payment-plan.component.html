@@ -1,0 +1,31 @@
+<h2 class="mb-3">Formulario de Pago</h2>
+<form [formGroup]="paymentForm" (ngSubmit)="submitPayment()">
+  <div class="mb-3">
+    <label for="paymentType" class="form-label">Tipo de Pago</label>
+    <select id="paymentType" class="form-select" formControlName="paymentType">
+      <option value="Tarjeta">Tarjeta</option>
+      <option value="Yape">Yape</option>
+      <option value="Paypal">Paypal</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label for="dni" class="form-label">DNI</label>
+    <input type="text" id="dni" class="form-control" formControlName="dni">
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Correo Electrónico</label>
+    <input type="email" id="email" class="form-control" formControlName="email">
+  </div>
+  <button type="submit" class="btn btn-primary">Pagar</button>
+</form>
+<div class="message-overlay" *ngIf="isLoading || paymentSuccess">
+    <div class="message-container">
+        <mat-spinner *ngIf="isLoading" diameter="50" strokeWidth="5"></mat-spinner>
+        <div *ngIf="paymentSuccess" class="alert alert-success mt-3">
+            Pago con éxito.
+            <br>
+            <button class="btn btn-primary" (click)="closeDialog()">Cerrar</button>
+        </div>
+       
+    </div>
+</div>

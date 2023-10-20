@@ -29,6 +29,7 @@ import {MatSelectModule} from "@angular/material/select";
 import { TechnicianDialogComponent } from './components/technician-dialog/technician-dialog.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { DownloadReportDialogComponent } from './components/download-report-dialog/download-report-dialog.component';
+import { PaymentPlanComponent } from './components/payment-plan/payment-plan.component';
 
 
 @NgModule({
@@ -53,7 +54,8 @@ import { DownloadReportDialogComponent } from './components/download-report-dial
     PaymentEquipmentRepairComponent,
     SuccessDialogComponent,
     TechnicianDialogComponent,
-    DownloadReportDialogComponent
+    DownloadReportDialogComponent,
+    PaymentPlanComponent
   ],
   imports: [
     FormsModule,
